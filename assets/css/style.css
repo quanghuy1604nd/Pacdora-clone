@@ -1,0 +1,281 @@
+:root {
+    --color-background-1: #ffff;
+
+    --color-button-1: #731eff;
+
+    --color-hover-1: #f4f3f5;
+    --color-hover-2: #9155ff;
+    --color-banner: #f2f2f2;
+    --color-text-1: black;
+    --color-text-2: #7f7f7f;
+
+    --font-family-1: 'Gilroy', 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body, .btn {
+    font-family: var(--font-family-1);
+}
+
+a {
+    text-decoration: none;
+    color: #333;;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    min-height: 50px;
+    background-color: var(--color-background-1);
+    padding: 0 40px; /* ?? */
+    position: fixed;
+    font-weight: 500;
+    font-size: 16px;
+    z-index: 999;
+}
+
+.header__container {
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    display: flex;
+}
+
+
+.log-img {
+    display: flex;
+}
+
+.menu-list{
+    display: flex;
+    margin-left: 35px;
+}
+
+.menu-item {
+    margin-right: 16px;
+    position: relative;
+}
+
+.menu-item:hover .drop-down-container {
+    display: block;
+    animation: dropDownIn ease .3s;
+}
+
+@keyframes dropDownIn {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.menu-item-label {
+    height: 40px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item:hover {
+    border-radius: 20px;
+    background-color: var(--color-hover-1);
+}
+
+.drop-down-container {
+    position: absolute;
+    padding-top: 9px;
+    display: none;
+    transition: all .3s ease-in-out;
+}
+
+.drop-down {
+    display: flex;
+    padding: 32px 12px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px #00000014;
+}
+
+.sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-menu.sol-sub-menu {
+    padding-left: 8px;
+}
+.sub-item {
+    min-width: 280px;
+    padding: 12px 16px;
+}
+.sub-item .additional-info {
+    color: var(--color-text-2);
+    font-size: 14px;
+}
+
+.sub-menu-title + .sub-item {
+    margin-top: 8px;
+}
+
+.sub-menu-title {
+    padding: 0 0 0 14px;
+    font-size: 14px;
+    color: var(--color-text-2);
+}
+
+
+
+.sub-item:hover {
+    background-color: var(--color-hover-1);
+    border-radius: 10px;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+}
+
+.split-line {
+    width: 1px;
+    height: 16px;
+    background-color: #d1d0d2;
+    margin: 0 20px 0 6px
+}
+
+.btn {
+    padding: 0 20px;
+    border: none;
+    height: 40px;
+    background-color: var(--color-button-1);
+    font-size: inherit;
+}
+.btn:hover {
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.pricing-btn {
+    background-color: white;
+    padding: 0 16px;
+}
+
+.pricing-btn:hover {
+    background-color: var(--color-hover-1);
+}
+
+.login-btn {
+    color: white;
+    border-radius: 20px;
+}
+.login-btn:hover {
+    background-color: var(--color-hover-2);
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.banner {
+    background-color: var(--color-banner);
+    padding: 70px 120px;
+}
+
+.banner-text > h1{
+    font-size: 39.4057px; 
+    line-height: 55.4057px;
+    font-weight: 500;
+}
+
+.banner-text > h1:last-child {
+    color: var(--color-text-2);
+}
+
+.screen-card {
+}
+
+.banner-list {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    column-gap: 32px;
+    position: relative;
+}
+
+.banner-item {
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 12px 24px #00000014;
+    transition: all .3s ease-in-out;
+
+}
+
+.banner-item:hover {
+    transform: translateY(-4px);
+
+}
+
+.banner-item:hover .arrow {
+    background-color: black;
+    color: white;
+}
+
+.item-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 32px 8px;
+}
+
+.item-top > .title {
+    width: 80%;
+    font-size: 21.5px;
+    font-weight: 600;
+}
+
+.arrow {
+    padding: 4.5px 10px;
+    border-radius: 20px;;
+}
+
+.item-img {
+    overflow: hidden;
+    width: 100%;
+}
+
+.item-img-container {
+    display: flex;
+    justify-content: center;
+}
+
+.item-img-container >  img{
+    width: 84%;
+    object-fit: contain;
+    border-radius: 24px;
+}
