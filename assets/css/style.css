@@ -40,7 +40,9 @@ a {
 .header {
     width: 100%;
     min-height: 50px;
-    background-color: var(--color-background-1);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 10px #00000014;;
     padding: 0 40px; /* ?? */
     position: fixed;
     font-weight: 500;
@@ -182,7 +184,7 @@ a {
 }
 
 .pricing-btn {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     padding: 0 16px;
 }
 
@@ -204,28 +206,38 @@ a {
 
 .banner {
     background-color: var(--color-banner);
-    padding: 70px 120px;
 }
 
-.banner-text > h1{
+.box-title {
     font-size: 39.4057px; 
     line-height: 55.4057px;
     font-weight: 500;
 }
 
-.banner-text > h1:last-child {
+.box-title .sub-title {
     color: var(--color-text-2);
 }
 
+
+
+
 .screen-card {
+    padding: 70px 120px;
 }
 
-.banner-list {
+.table-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 32px;
+    row-gap: 32px;
+    position: relative;
+}
+
+.row {
     display: flex;
     justify-content: space-around;
-    margin-top: 32px;
     column-gap: 32px;
-    position: relative;
 }
 
 .banner-item {
@@ -246,7 +258,7 @@ a {
     color: white;
 }
 
-.item-top {
+.banner-item .item-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -264,9 +276,10 @@ a {
     border-radius: 20px;;
 }
 
-.item-img {
-    overflow: hidden;
-    width: 100%;
+.item-bottom {
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
 
 .item-img-container {
@@ -274,8 +287,40 @@ a {
     justify-content: center;
 }
 
-.item-img-container >  img{
+.banner .item-img-container >  img {
     width: 84%;
-    object-fit: contain;
     border-radius: 24px;
+}
+
+.screen-part .box-title .sub-title {
+    font-size: 17.8481px;
+    line-height: 24.7788px;
+}
+
+.mockup-item {
+    background-color: antiquewhite;
+    padding: 24px 0 0 24px;
+    border-radius: 24px;
+    width: 100%;
+}
+
+.mockup-item .title {
+    font-size: 17.5444px;
+}
+
+.mockup-item .num {
+    font-size: 13.8481px;
+}
+
+.mockup-item .item-img-container > img {
+    width: 78%;
+}
+
+.arrow-container {
+    position: absolute;
+    bottom: 27px
+}
+
+.mockup-item .item-img-container {
+    justify-content: flex-end;
 }
